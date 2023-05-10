@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tree Library: Класс TreeLib.AVLTree</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Tree Library<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_tree_lib_1_1_a_v_l_tree.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pri-static-methods">Закрытые статические члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_tree_lib_1_1_a_v_l_tree-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс TreeLib.AVLTree</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для создания структуры данных АВЛ дерева. Имеет балансировку дерева при изменении узлов для сохранения сложности О(LogN) при работе с деревом. Разница между высотами дочернего узла всегда равна 1 или 0 по модулю.  
+ <a href="class_tree_lib_1_1_a_v_l_tree.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:TreeLib.AVLTree:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_tree_lib_1_1_a_v_l_tree.png" usemap="#TreeLib.AVLTree_map" alt=""/>
+  <map id="TreeLib.AVLTree_map" name="TreeLib.AVLTree_map">
+<area href="class_tree_lib_1_1_bin_search_tree.html" title="Класс для создания структуры данных двоичного дерева поиска. Иерархическая структура данных сотоящая ..." alt="TreeLib.BinSearchTree" shape="rect" coords="0,0,144,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a50fc663b5aa3d68470f94239138bcad8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a50fc663b5aa3d68470f94239138bcad8">AVLTree</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a50fc663b5aa3d68470f94239138bcad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор дерева из имеющегося узла  <br /></td></tr>
+<tr class="separator:a50fc663b5aa3d68470f94239138bcad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92490b8764c1821b6d3e48c5ccd9fdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#af92490b8764c1821b6d3e48c5ccd9fdb">AVLTree</a> (int Key, int Value)</td></tr>
+<tr class="memdesc:af92490b8764c1821b6d3e48c5ccd9fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор для создания дерева с корнем с разным ключом и значением  <br /></td></tr>
+<tr class="separator:af92490b8764c1821b6d3e48c5ccd9fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e794efab15cef1a07fb874f3fa1b33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a88e794efab15cef1a07fb874f3fa1b33">AVLTree</a> (int Value)</td></tr>
+<tr class="memdesc:a88e794efab15cef1a07fb874f3fa1b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор для создания дерева с корнем с одним ключом и значением  <br /></td></tr>
+<tr class="separator:a88e794efab15cef1a07fb874f3fa1b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_tree_lib_1_1_bin_search_tree"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_tree_lib_1_1_bin_search_tree')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="class_tree_lib_1_1_bin_search_tree.html">TreeLib.BinSearchTree</a></td></tr>
+<tr class="memitem:a0811c5f0ffdeec4965324bbe7936110b inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a0811c5f0ffdeec4965324bbe7936110b">BinSearchTree</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a0811c5f0ffdeec4965324bbe7936110b inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор дерева из имеющегося узла  <br /></td></tr>
+<tr class="separator:a0811c5f0ffdeec4965324bbe7936110b inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25cef2e460b7e84323795074d14eb841 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a25cef2e460b7e84323795074d14eb841">BinSearchTree</a> (int Key, int Value)</td></tr>
+<tr class="memdesc:a25cef2e460b7e84323795074d14eb841 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор для создания дерева с корнем с разным ключом и значением  <br /></td></tr>
+<tr class="separator:a25cef2e460b7e84323795074d14eb841 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf1fec7ca9c307ef09da55de7dcf988 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a0cf1fec7ca9c307ef09da55de7dcf988">BinSearchTree</a> (int Value)</td></tr>
+<tr class="memdesc:a0cf1fec7ca9c307ef09da55de7dcf988 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор для создания дерева с корнем с одним ключом и значением  <br /></td></tr>
+<tr class="separator:a0cf1fec7ca9c307ef09da55de7dcf988 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8fae5051dd042ac50c8262d28b8f3e inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a3e8fae5051dd042ac50c8262d28b8f3e">Insert</a> (int Key, int Value)</td></tr>
+<tr class="memdesc:a3e8fae5051dd042ac50c8262d28b8f3e inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вставка нового узла с разными ключом и значением в дерево.  <br /></td></tr>
+<tr class="separator:a3e8fae5051dd042ac50c8262d28b8f3e inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614675c5d9cf7e5da2bbb13908446232 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a614675c5d9cf7e5da2bbb13908446232">Insert</a> (int Value)</td></tr>
+<tr class="memdesc:a614675c5d9cf7e5da2bbb13908446232 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вставка нового узла с одинаковым ключом и значением в дерево.  <br /></td></tr>
+<tr class="separator:a614675c5d9cf7e5da2bbb13908446232 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ec7a15724afe57853ac386fffd3ad8 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#ad3ec7a15724afe57853ac386fffd3ad8">Search</a> (int Key)</td></tr>
+<tr class="memdesc:ad3ec7a15724afe57853ac386fffd3ad8 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла с определнным ключом в дереве. Поскольку дерево создается отсортированым, то сложность поиска оценивается как О(LogN)  <br /></td></tr>
+<tr class="separator:ad3ec7a15724afe57853ac386fffd3ad8 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679abb44694f025370505a97edfeb4fa inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a679abb44694f025370505a97edfeb4fa">Delete</a> (int Key)</td></tr>
+<tr class="memdesc:a679abb44694f025370505a97edfeb4fa inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление узла с определенным ключом в дереве.  <br /></td></tr>
+<tr class="separator:a679abb44694f025370505a97edfeb4fa inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a03fb96d0aa2006769bc260e1511862 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a2a03fb96d0aa2006769bc260e1511862">GetMin</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a2a03fb96d0aa2006769bc260e1511862 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла с минимальным значением ключа от данного узла.  <br /></td></tr>
+<tr class="separator:a2a03fb96d0aa2006769bc260e1511862 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba55e3b30c909781177faa905c46934 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a1ba55e3b30c909781177faa905c46934">GetMax</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a1ba55e3b30c909781177faa905c46934 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск узла с максимальным значением ключа от данного узла.  <br /></td></tr>
+<tr class="separator:a1ba55e3b30c909781177faa905c46934 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5aa2e6553e13a6d93d388001356dc7a inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#ad5aa2e6553e13a6d93d388001356dc7a">PrintTree</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, List&lt; int &gt; Output)</td></tr>
+<tr class="memdesc:ad5aa2e6553e13a6d93d388001356dc7a inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод данных дерева симметричным обходом. Производит обход дерева в порядке возрастания ключа.  <br /></td></tr>
+<tr class="separator:ad5aa2e6553e13a6d93d388001356dc7a inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e457429db48743fcd1d326f8341a25 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a08e457429db48743fcd1d326f8341a25">DeleteTree</a> ()</td></tr>
+<tr class="memdesc:a08e457429db48743fcd1d326f8341a25 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление всего дерева обратным обходом.  <br /></td></tr>
+<tr class="separator:a08e457429db48743fcd1d326f8341a25 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4b7732fced018f4aee689d93280269 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#aaa4b7732fced018f4aee689d93280269">CopyTree</a> (<a class="el" href="class_tree_lib_1_1_bin_search_tree.html">BinSearchTree</a> targetTree)</td></tr>
+<tr class="memdesc:aaa4b7732fced018f4aee689d93280269 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Копирование дерева в другое дерево путем прямого обхода.  <br /></td></tr>
+<tr class="separator:aaa4b7732fced018f4aee689d93280269 inherit pub_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a39ddf27f47f502573eeacf57c3da2163"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a39ddf27f47f502573eeacf57c3da2163">Insert</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Key, int Value)</td></tr>
+<tr class="memdesc:a39ddf27f47f502573eeacf57c3da2163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вставка работает по принципу бинарного дерева. После вставки вычисляет высоты и проводит перебалансирование.  <br /></td></tr>
+<tr class="separator:a39ddf27f47f502573eeacf57c3da2163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71a8fde5a1cf98d4a86c637442e8103"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#ab71a8fde5a1cf98d4a86c637442e8103">Delete</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Key)</td></tr>
+<tr class="memdesc:ab71a8fde5a1cf98d4a86c637442e8103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление работает по принципу бинарного дерева. После удаления вычисляет высоты и проводит перебалансирование.  <br /></td></tr>
+<tr class="separator:ab71a8fde5a1cf98d4a86c637442e8103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_tree_lib_1_1_bin_search_tree"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_tree_lib_1_1_bin_search_tree')"><img src="closed.png" alt="-"/>&#160;Защищенные члены унаследованные от <a class="el" href="class_tree_lib_1_1_bin_search_tree.html">TreeLib.BinSearchTree</a></td></tr>
+<tr class="memitem:a0a09ba6f2705e0bab506e61968417d43 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a0a09ba6f2705e0bab506e61968417d43">Insert</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Key, int Value)</td></tr>
+<tr class="memdesc:a0a09ba6f2705e0bab506e61968417d43 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для различных ключа и значения.  <br /></td></tr>
+<tr class="separator:a0a09ba6f2705e0bab506e61968417d43 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83e3e8e119594661fc18afc46c72124 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#ad83e3e8e119594661fc18afc46c72124">Insert</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Value)</td></tr>
+<tr class="memdesc:ad83e3e8e119594661fc18afc46c72124 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для одинаковых ключа и значения.  <br /></td></tr>
+<tr class="separator:ad83e3e8e119594661fc18afc46c72124 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa922b9a35e55b6ea724d5bc2bab74ac8 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#aa922b9a35e55b6ea724d5bc2bab74ac8">Search</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Key)</td></tr>
+<tr class="memdesc:aa922b9a35e55b6ea724d5bc2bab74ac8 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необходимого места. Метод для одинаковых ключа и значения.  <br /></td></tr>
+<tr class="separator:aa922b9a35e55b6ea724d5bc2bab74ac8 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff08ecbb146c102a8d5f3360c307a0c inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#afff08ecbb146c102a8d5f3360c307a0c">Delete</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>, int Key)</td></tr>
+<tr class="memdesc:afff08ecbb146c102a8d5f3360c307a0c inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для удаления узла с определенным ключом в дереве. В данном классе удаление начинается от дерева и идет по рекурсии до необходимого места. Удаление работает по правилам: Если элемент является листом, то заменяется на null Если элемент имеет одного ребенка, то он заменяется на ребенка Если элемент имеет двух детей, наибольший элемент левой ветки встает на место родителя. Этот ребенок удаляется в последствии.  <br /></td></tr>
+<tr class="separator:afff08ecbb146c102a8d5f3360c307a0c inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcb7d23fbbdcd1b730bce0e4a4d26cc inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#affcb7d23fbbdcd1b730bce0e4a4d26cc">DeleteTree</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:affcb7d23fbbdcd1b730bce0e4a4d26cc inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для удаления всего дерева обратным обходом с определенно узла. Позволяет безопастно удалить дерево в языках с ручным управление памятью.  <br /></td></tr>
+<tr class="separator:affcb7d23fbbdcd1b730bce0e4a4d26cc inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090b1c611a68e67d8ad48a22fb9c4bf0 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a090b1c611a68e67d8ad48a22fb9c4bf0">CopyTree</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> SourceNode, <a class="el" href="class_tree_lib_1_1_node.html">Node</a> TargetNode)</td></tr>
+<tr class="memdesc:a090b1c611a68e67d8ad48a22fb9c4bf0 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="mdescLeft">&#160;</td><td class="mdescRight">Защищенный метод для копирования дерева в другое дерево путем прямого обхода.  <br /></td></tr>
+<tr class="separator:a090b1c611a68e67d8ad48a22fb9c4bf0 inherit pro_methods_class_tree_lib_1_1_bin_search_tree"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Закрытые статические члены</h2></td></tr>
+<tr class="memitem:ac0a6cf667778621609b78c8109e77124"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#ac0a6cf667778621609b78c8109e77124">GetHeight</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:ac0a6cf667778621609b78c8109e77124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение высоты узла Не существующий узел имеет высоту -1.  <br /></td></tr>
+<tr class="separator:ac0a6cf667778621609b78c8109e77124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad866c11532284888cf39e81e35e53d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#aad866c11532284888cf39e81e35e53d9">UpdateHeight</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:aad866c11532284888cf39e81e35e53d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление высоты узла в связи с изменением узлов дерева Во время скрутки стека из-за рекурсии обновляет высоты всех пройденых элементов Высота вычисляется по формуле <picture><source srcset="form_0_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Max(HeightLeft,HeightRight)+1$" src="form_0.png"/></picture>.  <br /></td></tr>
+<tr class="separator:aad866c11532284888cf39e81e35e53d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602d0878544b949bbb555abb524462d8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a602d0878544b949bbb555abb524462d8">GetBalance</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a602d0878544b949bbb555abb524462d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка текущего баланса узла Дерево перегружено влево, если число отрицательное Дерево перегружено вправо, если число положительное  <br /></td></tr>
+<tr class="separator:a602d0878544b949bbb555abb524462d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695b8217daf6184ad1a04f4d70505636"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a695b8217daf6184ad1a04f4d70505636">Swap</a> (<a class="el" href="class_tree_lib_1_1_node.html">Node</a> a, <a class="el" href="class_tree_lib_1_1_node.html">Node</a> b)</td></tr>
+<tr class="memdesc:a695b8217daf6184ad1a04f4d70505636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поменять местами два узла в дереве  <br /></td></tr>
+<tr class="separator:a695b8217daf6184ad1a04f4d70505636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18d9fbd5b1ea5deea5bdbf45bc77b8e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#ab18d9fbd5b1ea5deea5bdbf45bc77b8e">RightRotate</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:ab18d9fbd5b1ea5deea5bdbf45bc77b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Правый поворот узла в дереве. После поворота высоты пересчитывются.  <br /></td></tr>
+<tr class="separator:ab18d9fbd5b1ea5deea5bdbf45bc77b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873773dd454e6dfeae5e2437df4b2709"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a873773dd454e6dfeae5e2437df4b2709">LeftRotate</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a873773dd454e6dfeae5e2437df4b2709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Левый поворот узла в дереве. После поворота высоты пересчитывются.  <br /></td></tr>
+<tr class="separator:a873773dd454e6dfeae5e2437df4b2709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8aa2ac09f98653bbc71d600dd0f259"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#a8b8aa2ac09f98653bbc71d600dd0f259">Balance</a> (<a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> <a class="el" href="class_tree_lib_1_1_node.html">Node</a>)</td></tr>
+<tr class="memdesc:a8b8aa2ac09f98653bbc71d600dd0f259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка балансировки детей. Проводит балансировку дерева. После поворота высоты пересчитывются.  <br /></td></tr>
+<tr class="separator:a8b8aa2ac09f98653bbc71d600dd0f259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aaf6e4e6e34b092c7e492f38c17404d66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html#aaf6e4e6e34b092c7e492f38c17404d66">root</a></td></tr>
+<tr class="memdesc:aaf6e4e6e34b092c7e492f38c17404d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поле корня дерева, представляющие из себя АВЛ узел.  <br /></td></tr>
+<tr class="separator:aaf6e4e6e34b092c7e492f38c17404d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для создания структуры данных АВЛ дерева. Имеет балансировку дерева при изменении узлов для сохранения сложности О(LogN) при работе с деревом. Разница между высотами дочернего узла всегда равна 1 или 0 по модулю. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a50fc663b5aa3d68470f94239138bcad8" name="a50fc663b5aa3d68470f94239138bcad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50fc663b5aa3d68470f94239138bcad8">&#9670;&#160;</a></span>AVLTree() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TreeLib.AVLTree.AVLTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор дерева из имеющегося узла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Проинициализированный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af92490b8764c1821b6d3e48c5ccd9fdb" name="af92490b8764c1821b6d3e48c5ccd9fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92490b8764c1821b6d3e48c5ccd9fdb">&#9670;&#160;</a></span>AVLTree() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TreeLib.AVLTree.AVLTree </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор для создания дерева с корнем с разным ключом и значением </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Key</td><td>Ключ узла</td></tr>
+    <tr><td class="paramname">Value</td><td>Данные узла</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88e794efab15cef1a07fb874f3fa1b33" name="a88e794efab15cef1a07fb874f3fa1b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e794efab15cef1a07fb874f3fa1b33">&#9670;&#160;</a></span>AVLTree() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TreeLib.AVLTree.AVLTree </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор для создания дерева с корнем с одним ключом и значением </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Value</td><td>Данные узла</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8b8aa2ac09f98653bbc71d600dd0f259" name="a8b8aa2ac09f98653bbc71d600dd0f259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8aa2ac09f98653bbc71d600dd0f259">&#9670;&#160;</a></span>Balance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TreeLib.AVLTree.Balance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверка балансировки детей. Проводит балансировку дерева. После поворота высоты пересчитывются. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Начальный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab71a8fde5a1cf98d4a86c637442e8103" name="ab71a8fde5a1cf98d4a86c637442e8103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71a8fde5a1cf98d4a86c637442e8103">&#9670;&#160;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="class_tree_lib_1_1_node.html">Node</a> TreeLib.AVLTree.Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>Node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаление работает по принципу бинарного дерева. После удаления вычисляет высоты и проводит перебалансирование. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Начальный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="class_tree_lib_1_1_bin_search_tree.html#afff08ecbb146c102a8d5f3360c307a0c">TreeLib.BinSearchTree</a>.</p>
+
+</div>
+</div>
+<a id="a602d0878544b949bbb555abb524462d8" name="a602d0878544b949bbb555abb524462d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602d0878544b949bbb555abb524462d8">&#9670;&#160;</a></span>GetBalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int TreeLib.AVLTree.GetBalance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверка текущего баланса узла Дерево перегружено влево, если число отрицательное Дерево перегружено вправо, если число положительное </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Начальный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>returns&gt;Значение перугрузки</p>
+
+</div>
+</div>
+<a id="ac0a6cf667778621609b78c8109e77124" name="ac0a6cf667778621609b78c8109e77124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a6cf667778621609b78c8109e77124">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int TreeLib.AVLTree.GetHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение высоты узла Не существующий узел имеет высоту -1. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Начальный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>returns&gt;Высота начального узла</p>
+
+</div>
+</div>
+<a id="a39ddf27f47f502573eeacf57c3da2163" name="a39ddf27f47f502573eeacf57c3da2163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ddf27f47f502573eeacf57c3da2163">&#9670;&#160;</a></span>Insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TreeLib.AVLTree.Insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>Node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вставка работает по принципу бинарного дерева. После вставки вычисляет высоты и проводит перебалансирование. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Начальный узел</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Переопределяет метод предка <a class="el" href="class_tree_lib_1_1_bin_search_tree.html#a0a09ba6f2705e0bab506e61968417d43">TreeLib.BinSearchTree</a>.</p>
+
+</div>
+</div>
+<a id="a873773dd454e6dfeae5e2437df4b2709" name="a873773dd454e6dfeae5e2437df4b2709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873773dd454e6dfeae5e2437df4b2709">&#9670;&#160;</a></span>LeftRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TreeLib.AVLTree.LeftRotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Левый поворот узла в дереве. После поворота высоты пересчитывются. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Узел для поворота</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab18d9fbd5b1ea5deea5bdbf45bc77b8e" name="ab18d9fbd5b1ea5deea5bdbf45bc77b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18d9fbd5b1ea5deea5bdbf45bc77b8e">&#9670;&#160;</a></span>RightRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TreeLib.AVLTree.RightRotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Правый поворот узла в дереве. После поворота высоты пересчитывются. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Node</td><td>Узел для поворота</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a695b8217daf6184ad1a04f4d70505636" name="a695b8217daf6184ad1a04f4d70505636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695b8217daf6184ad1a04f4d70505636">&#9670;&#160;</a></span>Swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TreeLib.AVLTree.Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поменять местами два узла в дереве </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Первый узел</td></tr>
+    <tr><td class="paramname">b</td><td>Второй узел</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad866c11532284888cf39e81e35e53d9" name="aad866c11532284888cf39e81e35e53d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad866c11532284888cf39e81e35e53d9">&#9670;&#160;</a></span>UpdateHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TreeLib.AVLTree.UpdateHeight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a>&#160;</td>
+          <td class="paramname"><em>Node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обновление высоты узла в связи с изменением узлов дерева Во время скрутки стека из-за рекурсии обновляет высоты всех пройденых элементов Высота вычисляется по формуле <picture><source srcset="form_0_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaInl" alt="$Max(HeightLeft,HeightRight)+1$" src="form_0.png"/></picture>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aaf6e4e6e34b092c7e492f38c17404d66" name="aaf6e4e6e34b092c7e492f38c17404d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6e4e6e34b092c7e492f38c17404d66">&#9670;&#160;</a></span>root</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tree_lib_1_1_a_v_l_node.html">AVLNode</a> TreeLib.AVLTree.root</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поле корня дерева, представляющие из себя АВЛ узел. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>C:/Users/User/Desktop/folder/TreeLib/<a class="el" href="_a_v_l_tree_8cs.html">AVLTree.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_tree_lib.html">TreeLib</a></li><li class="navelem"><a class="el" href="class_tree_lib_1_1_a_v_l_tree.html">AVLTree</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>
