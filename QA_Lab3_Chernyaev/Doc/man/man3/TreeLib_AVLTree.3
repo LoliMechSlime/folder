@@ -1,0 +1,117 @@
+.TH "TreeLib.AVLTree" 3 "Sun May 7 2023" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TreeLib.AVLTree
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBTreeLib\&.BinSearchTree\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAVLTree\fP (\fBAVLNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "\fBAVLTree\fP (int Key, int Value)"
+.br
+.ti -1c
+.RI "\fBAVLTree\fP (int Value)"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBTreeLib\&.BinSearchTree\fP
+.in +1c
+.ti -1c
+.RI "\fBBinSearchTree\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "\fBBinSearchTree\fP (int Key, int Value)"
+.br
+.ti -1c
+.RI "\fBBinSearchTree\fP (int Value)"
+.br
+.ti -1c
+.RI "void \fBInsert\fP (int Key, int Value)"
+.br
+.ti -1c
+.RI "void \fBInsert\fP (int Value)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBSearch\fP (int Key)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBDelete\fP (int Key)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBGetMin\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBGetMax\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "void \fBPrintTree\fP (\fBNode\fP \fBNode\fP, List< int > Output)"
+.br
+.ti -1c
+.RI "void \fBDeleteTree\fP ()"
+.br
+.ti -1c
+.RI "void \fBCopyTree\fP (\fBBinSearchTree\fP targetTree)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBInsert\fP (\fBNode\fP \fBNode\fP, int Key, int Value)"
+.br
+.ti -1c
+.RI "override \fBNode\fP \fBDelete\fP (\fBNode\fP \fBNode\fP, int Key)"
+.br
+.in -1c
+
+Protected Member Functions inherited from \fBTreeLib\&.BinSearchTree\fP
+.in +1c
+.ti -1c
+.RI "virtual void \fBInsert\fP (\fBNode\fP \fBNode\fP, int Key, int Value)"
+.br
+.ti -1c
+.RI "virtual void \fBInsert\fP (\fBNode\fP \fBNode\fP, int Value)"
+.br
+.ti -1c
+.RI "virtual \fBNode\fP \fBSearch\fP (\fBNode\fP \fBNode\fP, int Key)"
+.br
+.ti -1c
+.RI "virtual \fBNode\fP \fBDelete\fP (\fBNode\fP \fBNode\fP, int Key)"
+.br
+.ti -1c
+.RI "void \fBDeleteTree\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBCopyTree\fP (\fBNode\fP SourceNode, \fBNode\fP TargetNode)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TreeLib\&.AVLTree\&.AVLTree (\fBAVLNode\fP Node)"
+
+.SS "TreeLib\&.AVLTree\&.AVLTree (int Key, int Value)"
+
+.SS "TreeLib\&.AVLTree\&.AVLTree (int Value)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "override \fBNode\fP TreeLib\&.AVLTree\&.Delete (\fBNode\fP Node, int Key)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTreeLib\&.BinSearchTree\fP\&.
+.SS "override void TreeLib\&.AVLTree\&.Insert (\fBNode\fP Node, int Key, int Value)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBTreeLib\&.BinSearchTree\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

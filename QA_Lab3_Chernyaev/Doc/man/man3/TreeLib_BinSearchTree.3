@@ -1,0 +1,120 @@
+.TH "TreeLib.BinSearchTree" 3 "Sun May 7 2023" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TreeLib.BinSearchTree
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBTreeLib\&.AVLTree\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBinSearchTree\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "\fBBinSearchTree\fP (int Key, int Value)"
+.br
+.ti -1c
+.RI "\fBBinSearchTree\fP (int Value)"
+.br
+.ti -1c
+.RI "void \fBInsert\fP (int Key, int Value)"
+.br
+.ti -1c
+.RI "void \fBInsert\fP (int Value)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBSearch\fP (int Key)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBDelete\fP (int Key)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBGetMin\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "\fBNode\fP \fBGetMax\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "void \fBPrintTree\fP (\fBNode\fP \fBNode\fP, List< int > Output)"
+.br
+.ti -1c
+.RI "void \fBDeleteTree\fP ()"
+.br
+.ti -1c
+.RI "void \fBCopyTree\fP (\fBBinSearchTree\fP targetTree)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBInsert\fP (\fBNode\fP \fBNode\fP, int Key, int Value)"
+.br
+.ti -1c
+.RI "virtual void \fBInsert\fP (\fBNode\fP \fBNode\fP, int Value)"
+.br
+.ti -1c
+.RI "virtual \fBNode\fP \fBSearch\fP (\fBNode\fP \fBNode\fP, int Key)"
+.br
+.ti -1c
+.RI "virtual \fBNode\fP \fBDelete\fP (\fBNode\fP \fBNode\fP, int Key)"
+.br
+.ti -1c
+.RI "void \fBDeleteTree\fP (\fBNode\fP \fBNode\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBCopyTree\fP (\fBNode\fP SourceNode, \fBNode\fP TargetNode)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TreeLib\&.BinSearchTree\&.BinSearchTree (\fBNode\fP Node)"
+
+.SS "TreeLib\&.BinSearchTree\&.BinSearchTree (int Key, int Value)"
+
+.SS "TreeLib\&.BinSearchTree\&.BinSearchTree (int Value)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TreeLib\&.BinSearchTree\&.CopyTree (\fBBinSearchTree\fP targetTree)"
+
+.SS "virtual void TreeLib\&.BinSearchTree\&.CopyTree (\fBNode\fP SourceNode, \fBNode\fP TargetNode)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "\fBNode\fP TreeLib\&.BinSearchTree\&.Delete (int Key)"
+
+.SS "virtual \fBNode\fP TreeLib\&.BinSearchTree\&.Delete (\fBNode\fP Node, int Key)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBTreeLib\&.AVLTree\fP\&.
+.SS "void TreeLib\&.BinSearchTree\&.DeleteTree ()"
+
+.SS "void TreeLib\&.BinSearchTree\&.DeleteTree (\fBNode\fP Node)\fC [protected]\fP"
+
+.SS "\fBNode\fP TreeLib\&.BinSearchTree\&.GetMax (\fBNode\fP Node)"
+
+.SS "\fBNode\fP TreeLib\&.BinSearchTree\&.GetMin (\fBNode\fP Node)"
+
+.SS "void TreeLib\&.BinSearchTree\&.Insert (int Key, int Value)"
+
+.SS "void TreeLib\&.BinSearchTree\&.Insert (int Value)"
+
+.SS "virtual void TreeLib\&.BinSearchTree\&.Insert (\fBNode\fP Node, int Key, int Value)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBTreeLib\&.AVLTree\fP\&.
+.SS "virtual void TreeLib\&.BinSearchTree\&.Insert (\fBNode\fP Node, int Value)\fC [protected]\fP, \fC [virtual]\fP"
+
+.SS "void TreeLib\&.BinSearchTree\&.PrintTree (\fBNode\fP Node, List< int > Output)"
+
+.SS "\fBNode\fP TreeLib\&.BinSearchTree\&.Search (int Key)"
+
+.SS "virtual \fBNode\fP TreeLib\&.BinSearchTree\&.Search (\fBNode\fP Node, int Key)\fC [protected]\fP, \fC [virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.
