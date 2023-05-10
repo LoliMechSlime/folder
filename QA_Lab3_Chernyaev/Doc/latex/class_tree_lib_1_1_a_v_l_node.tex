@@ -1,0 +1,141 @@
+\doxysection{Класс Tree\+Lib.\+AVLNode}
+\label{class_tree_lib_1_1_a_v_l_node}\index{TreeLib.AVLNode@{TreeLib.AVLNode}}
+
+
+Класс узла для хранения данных АВЛдерева. Имеет вес для выполнения балансировки. Поумолчанию все равен нулю. Имеет ссылки на два других узла и поля для ключа и значения.  
+
+
+Граф наследования\+:Tree\+Lib.\+AVLNode\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_lib_1_1_a_v_l_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ AVLNode} (int \textbf{ Key}, int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с заданым значением ключа и данных \end{DoxyCompactList}\item 
+\textbf{ AVLNode} (int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с одинковым значением данных и ключа \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \textbf{ Tree\+Lib.\+Node}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Node} (int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с одинковым значением данных и ключа \end{DoxyCompactList}\item 
+\textbf{ Node} (int \textbf{ Key}, int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с заданым значением ключа и данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+new \textbf{ AVLNode} \textbf{ Left}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+new \textbf{ AVLNode} \textbf{ Right}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+int \textbf{ Height}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства унаследованные от \textbf{ Tree\+Lib.\+Node}}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Key}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Свойство для доступа к полю с ключом узла \end{DoxyCompactList}\item 
+int \textbf{ Value}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Свойство для доступа к полю значения узла \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Left}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+\textbf{ Node} \textbf{ Right}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ AVLNode} \textbf{ left} = null
+\item 
+\textbf{ AVLNode} \textbf{ right} = null
+\item 
+int \textbf{ height} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс узла для хранения данных АВЛдерева. Имеет вес для выполнения балансировки. Поумолчанию все равен нулю. Имеет ссылки на два других узла и поля для ключа и значения. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_aec4f118471dd3b896e0633a4a4281f74}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!AVLNode@{AVLNode}}
+\index{AVLNode@{AVLNode}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{AVLNode()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tree\+Lib.\+AVLNode.\+AVLNode (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания узла с заданым значением ключа и данных 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные для занесения в узел\\
+\hline
+{\em Key} & Ключ для идентификации узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_a5013942ea44a860e370671b6b505861f}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!AVLNode@{AVLNode}}
+\index{AVLNode@{AVLNode}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{AVLNode()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tree\+Lib.\+AVLNode.\+AVLNode (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания узла с одинковым значением данных и ключа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные для занесения в узел\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Данные класса}
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_ae402117f13867f2748d6d73a0907ab5c}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!height@{height}}
+\index{height@{height}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{height}
+{\footnotesize\ttfamily int Tree\+Lib.\+AVLNode.\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_afcecf2d2864a91fb9c98c91b4980f8a9}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!left@{left}}
+\index{left@{left}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{left}
+{\footnotesize\ttfamily \textbf{ AVLNode} Tree\+Lib.\+AVLNode.\+left = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_a1b396f8f0dbb9e40b79b61ee296e54b4}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!right@{right}}
+\index{right@{right}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{right}
+{\footnotesize\ttfamily \textbf{ AVLNode} Tree\+Lib.\+AVLNode.\+right = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Полный список свойств}
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_af4fa94151a896dfcd05171fcfe3baefb}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!Height@{Height}}
+\index{Height@{Height}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{Height}
+{\footnotesize\ttfamily int Tree\+Lib.\+AVLNode.\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_aa80d85395121751e9d07e74ac34bb235}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!Left@{Left}}
+\index{Left@{Left}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{Left}
+{\footnotesize\ttfamily new \textbf{ AVLNode} Tree\+Lib.\+AVLNode.\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_node_ade47ad46f50e8955f4641ee19e095546}} 
+\index{TreeLib.AVLNode@{TreeLib.AVLNode}!Right@{Right}}
+\index{Right@{Right}!TreeLib.AVLNode@{TreeLib.AVLNode}}
+\doxysubsubsection{Right}
+{\footnotesize\ttfamily new \textbf{ AVLNode} Tree\+Lib.\+AVLNode.\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/folder/\+Tree\+Lib/\textbf{ AVLNode.\+cs}\end{DoxyCompactItemize}

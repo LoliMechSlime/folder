@@ -1,0 +1,155 @@
+\doxysection{Класс Tree\+Lib.\+Node}
+\label{class_tree_lib_1_1_node}\index{TreeLib.Node@{TreeLib.Node}}
+
+
+Класс узла для хранения данных в виде дерева. Имеет ссылки на два других узла и поля для ключа и значения  
+
+
+Граф наследования\+:Tree\+Lib.\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_lib_1_1_node}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Node} (int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с одинковым значением данных и ключа \end{DoxyCompactList}\item 
+\textbf{ Node} (int \textbf{ Key}, int \textbf{ Value})
+\begin{DoxyCompactList}\small\item\em Конструктор для создания узла с заданым значением ключа и данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Key}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Свойство для доступа к полю с ключом узла \end{DoxyCompactList}\item 
+int \textbf{ Value}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Свойство для доступа к полю значения узла \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Left}\hspace{0.3cm}{\ttfamily  [get, set]}
+\item 
+\textbf{ Node} \textbf{ Right}\hspace{0.3cm}{\ttfamily  [get, set]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ key}
+\begin{DoxyCompactList}\small\item\em Поле для хранения ключа для доступа к узлу \end{DoxyCompactList}\item 
+int \textbf{ value}
+\begin{DoxyCompactList}\small\item\em Поле для хранения значения узла \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ left} = null
+\item 
+\textbf{ Node} \textbf{ right} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс узла для хранения данных в виде дерева. Имеет ссылки на два других узла и поля для ключа и значения 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\label{class_tree_lib_1_1_node_a141318cb815d4eb4e817ed9440ca1e44}} 
+\index{TreeLib.Node@{TreeLib.Node}!Node@{Node}}
+\index{Node@{Node}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Node()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tree\+Lib.\+Node.\+Node (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания узла с одинковым значением данных и ключа 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные для занесения в узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_node_a1a17c7f3614f65fbe6bfa45ebcaba0e8}} 
+\index{TreeLib.Node@{TreeLib.Node}!Node@{Node}}
+\index{Node@{Node}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Node()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tree\+Lib.\+Node.\+Node (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания узла с заданым значением ключа и данных 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные для занесения в узел\\
+\hline
+{\em Key} & Ключ для идентификации узла\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Данные класса}
+\mbox{\label{class_tree_lib_1_1_node_aca8ed49c69717bde1379c4f278a52850}} 
+\index{TreeLib.Node@{TreeLib.Node}!key@{key}}
+\index{key@{key}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{key}
+{\footnotesize\ttfamily int Tree\+Lib.\+Node.\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Поле для хранения ключа для доступа к узлу 
+
+\mbox{\label{class_tree_lib_1_1_node_aeb68afb6fbcc1626f94a81b9d19599d4}} 
+\index{TreeLib.Node@{TreeLib.Node}!left@{left}}
+\index{left@{left}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{left}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Node.\+left = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_tree_lib_1_1_node_a46619a99d810019c5c7ef194ba70d9ed}} 
+\index{TreeLib.Node@{TreeLib.Node}!right@{right}}
+\index{right@{right}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{right}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Node.\+right = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_tree_lib_1_1_node_a0965ec6f538cf39b85b88d3e608ea291}} 
+\index{TreeLib.Node@{TreeLib.Node}!value@{value}}
+\index{value@{value}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{value}
+{\footnotesize\ttfamily int Tree\+Lib.\+Node.\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Поле для хранения значения узла 
+
+
+
+\doxysubsection{Полный список свойств}
+\mbox{\label{class_tree_lib_1_1_node_a670ce7eab0f18f785be6bdbd757dd24e}} 
+\index{TreeLib.Node@{TreeLib.Node}!Key@{Key}}
+\index{Key@{Key}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Key}
+{\footnotesize\ttfamily int Tree\+Lib.\+Node.\+Key\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Свойство для доступа к полю с ключом узла 
+
+\mbox{\label{class_tree_lib_1_1_node_a2c3ae64a9e3593b164806442931e9773}} 
+\index{TreeLib.Node@{TreeLib.Node}!Left@{Left}}
+\index{Left@{Left}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Left}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Node.\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_tree_lib_1_1_node_ac56cb448ac4c41d7a2b982a04c913ab6}} 
+\index{TreeLib.Node@{TreeLib.Node}!Right@{Right}}
+\index{Right@{Right}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Right}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Node.\+Right\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\label{class_tree_lib_1_1_node_ae8a1633303068ef6ada718c65a205da1}} 
+\index{TreeLib.Node@{TreeLib.Node}!Value@{Value}}
+\index{Value@{Value}!TreeLib.Node@{TreeLib.Node}}
+\doxysubsubsection{Value}
+{\footnotesize\ttfamily int Tree\+Lib.\+Node.\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Свойство для доступа к полю значения узла 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/folder/\+Tree\+Lib/\textbf{ Node.\+cs}\end{DoxyCompactItemize}

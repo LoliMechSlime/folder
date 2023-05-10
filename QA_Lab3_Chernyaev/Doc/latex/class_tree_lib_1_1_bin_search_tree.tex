@@ -1,0 +1,397 @@
+\doxysection{Класс Tree\+Lib.\+Bin\+Search\+Tree}
+\label{class_tree_lib_1_1_bin_search_tree}\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+
+
+Класс для создания структуры данных двоичного дерева поиска. Иерархическая структура данных сотоящая из узлов, хранящие ключ-\/значение и имеет двух детей. Данные добаляются по правилам\+:  
+
+
+Граф наследования\+:Tree\+Lib.\+Bin\+Search\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_lib_1_1_bin_search_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bin\+Search\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Конструктор дерева из имеющегося узла \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с разным ключом и значением \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с одним ключом и значением \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с разными ключом и значением в дерево. \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с одинаковым ключом и значением в дерево. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Search} (int Key)
+\begin{DoxyCompactList}\small\item\em Поиск узла с определнным ключом в дереве. Поскольку дерево создается отсортированым, то сложность поиска оценивается как О(\+Log\+N) \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Delete} (int Key)
+\begin{DoxyCompactList}\small\item\em Удаление узла с определенным ключом в дереве. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Min} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с минимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Max} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с максимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+void \textbf{ Print\+Tree} (\textbf{ Node} \textbf{ Node}, List$<$ int $>$ Output)
+\begin{DoxyCompactList}\small\item\em Вывод данных дерева симметричным обходом. Производит обход дерева в порядке возрастания ключа. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Удаление всего дерева обратным обходом. \end{DoxyCompactList}\item 
+void \textbf{ Copy\+Tree} (\textbf{ Bin\+Search\+Tree} target\+Tree)
+\begin{DoxyCompactList}\small\item\em Копирование дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для различных ключа и значения. \end{DoxyCompactList}\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Search} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необходимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Delete} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления узла с определенным ключом в дереве. В данном классе удаление начинается от дерева и идет по рекурсии до необходимого места. Удаление работает по правилам\+: Если элемент является листом, то заменяется на null Если элемент имеет одного ребенка, то он заменяется на ребенка Если элемент имеет двух детей, наибольший элемент левой ветки встает на место родителя. Этот ребенок удаляется в последствии. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления всего дерева обратным обходом с определенно узла. Позволяет безопастно удалить дерево в языках с ручным управление памятью. \end{DoxyCompactList}\item 
+virtual void \textbf{ Copy\+Tree} (\textbf{ Node} Source\+Node, \textbf{ Node} Target\+Node)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для копирования дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Node} \textbf{ root}
+\begin{DoxyCompactList}\small\item\em Поле корня дерева, представляющие из себя узел. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для создания структуры данных двоичного дерева поиска. Иерархическая структура данных сотоящая из узлов, хранящие ключ-\/значение и имеет двух детей. Данные добаляются по правилам\+: 
+
+
+\begin{DoxyEnumerate}
+\item Если в дерево нет узлов, то новый узел становится корнем.
+\item Если ключ нового узла меньше ключа текущего узла, вставка рекурсивно идет налево.
+\item Если ключ нового узла больше или равен ключа текущего узла, вставка рекурсивно идет направо. При прохождении дерева узлы маршрута складываются в стек. Пример реализации дерева\+:  
+\end{DoxyEnumerate}
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a0811c5f0ffdeec4965324bbe7936110b}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!BinSearchTree@{BinSearchTree}}
+\index{BinSearchTree@{BinSearchTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{BinSearchTree()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+Bin\+Search\+Tree.\+Bin\+Search\+Tree (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node }\end{DoxyParamCaption})}
+
+
+
+Конструктор дерева из имеющегося узла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Проинициализированный узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a25cef2e460b7e84323795074d14eb841}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!BinSearchTree@{BinSearchTree}}
+\index{BinSearchTree@{BinSearchTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{BinSearchTree()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+Bin\+Search\+Tree.\+Bin\+Search\+Tree (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания дерева с корнем с разным ключом и значением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Key} & Ключ узла\\
+\hline
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a0cf1fec7ca9c307ef09da55de7dcf988}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!BinSearchTree@{BinSearchTree}}
+\index{BinSearchTree@{BinSearchTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{BinSearchTree()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+Bin\+Search\+Tree.\+Bin\+Search\+Tree (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания дерева с корнем с одним ключом и значением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_aaa4b7732fced018f4aee689d93280269}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!CopyTree@{CopyTree}}
+\index{CopyTree@{CopyTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{CopyTree()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Copy\+Tree (\begin{DoxyParamCaption}\item[{\textbf{ Bin\+Search\+Tree}}]{target\+Tree }\end{DoxyParamCaption})}
+
+
+
+Копирование дерева в другое дерево путем прямого обхода. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em target\+Tree} & Целевое дерево\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a090b1c611a68e67d8ad48a22fb9c4bf0}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!CopyTree@{CopyTree}}
+\index{CopyTree@{CopyTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{CopyTree()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Tree\+Lib.\+Bin\+Search\+Tree.\+Copy\+Tree (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Source\+Node,  }\item[{\textbf{ Node}}]{Target\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Защищенный метод для копирования дерева в другое дерево путем прямого обхода. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Source\+Node} & Начальное дерево\\
+\hline
+{\em target\+Tree} & Целевое дерево\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a679abb44694f025370505a97edfeb4fa}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Delete@{Delete}}
+\index{Delete@{Delete}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Delete()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Delete (\begin{DoxyParamCaption}\item[{int}]{Key }\end{DoxyParamCaption})}
+
+
+
+Удаление узла с определенным ключом в дереве. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Key} & Ключ необходимого узла\\
+\hline
+\end{DoxyParams}
+returns$>$Узел с перезаписанными данными в слечае, если данные по ссылке не передаются\mbox{\label{class_tree_lib_1_1_bin_search_tree_afff08ecbb146c102a8d5f3360c307a0c}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Delete@{Delete}}
+\index{Delete@{Delete}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Delete()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Delete (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Защищенный метод для удаления узла с определенным ключом в дереве. В данном классе удаление начинается от дерева и идет по рекурсии до необходимого места. Удаление работает по правилам\+: Если элемент является листом, то заменяется на null Если элемент имеет одного ребенка, то он заменяется на ребенка Если элемент имеет двух детей, наибольший элемент левой ветки встает на место родителя. Этот ребенок удаляется в последствии. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+{\em Key} & Ключ необходимого узла\\
+\hline
+\end{DoxyParams}
+
+
+Переопределяется в \textbf{ Tree\+Lib.\+AVLTree} \doxyref{}{стр.}{class_tree_lib_1_1_a_v_l_tree_ab71a8fde5a1cf98d4a86c637442e8103}.
+
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a08e457429db48743fcd1d326f8341a25}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!DeleteTree@{DeleteTree}}
+\index{DeleteTree@{DeleteTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{DeleteTree()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Delete\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаление всего дерева обратным обходом. 
+
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_affcb7d23fbbdcd1b730bce0e4a4d26cc}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!DeleteTree@{DeleteTree}}
+\index{DeleteTree@{DeleteTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{DeleteTree()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Delete\+Tree (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Защищенный метод для удаления всего дерева обратным обходом с определенно узла. Позволяет безопастно удалить дерево в языках с ручным управление памятью. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a1ba55e3b30c909781177faa905c46934}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!GetMax@{GetMax}}
+\index{GetMax@{GetMax}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{GetMax()}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Get\+Max (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node }\end{DoxyParamCaption})}
+
+
+
+Поиск узла с максимальным значением ключа от данного узла. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Крайний правый узел
+\end{DoxyReturn}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a2a03fb96d0aa2006769bc260e1511862}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!GetMin@{GetMin}}
+\index{GetMin@{GetMin}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{GetMin()}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Get\+Min (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node }\end{DoxyParamCaption})}
+
+
+
+Поиск узла с минимальным значением ключа от данного узла. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальынй узел\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Крайний левый узел
+\end{DoxyReturn}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a3e8fae5051dd042ac50c8262d28b8f3e}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Insert@{Insert}}
+\index{Insert@{Insert}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Insert()\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Insert (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Вставка нового узла с разными ключом и значением в дерево. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Key} & Ключ узла\\
+\hline
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a614675c5d9cf7e5da2bbb13908446232}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Insert@{Insert}}
+\index{Insert@{Insert}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Insert()\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Insert (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Вставка нового узла с одинаковым ключом и значением в дерево. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a0a09ba6f2705e0bab506e61968417d43}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Insert@{Insert}}
+\index{Insert@{Insert}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Insert()\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual void Tree\+Lib.\+Bin\+Search\+Tree.\+Insert (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для различных ключа и значения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Узел, с которого начинается вставка.\\
+\hline
+{\em Key} & Ключ узла\\
+\hline
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+
+
+Переопределяется в \textbf{ Tree\+Lib.\+AVLTree} \doxyref{}{стр.}{class_tree_lib_1_1_a_v_l_tree_a39ddf27f47f502573eeacf57c3da2163}.
+
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_ad83e3e8e119594661fc18afc46c72124}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Insert@{Insert}}
+\index{Insert@{Insert}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Insert()\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual void Tree\+Lib.\+Bin\+Search\+Tree.\+Insert (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для одинаковых ключа и значения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Узел, с которого начинается вставка.\\
+\hline
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_ad5aa2e6553e13a6d93d388001356dc7a}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!PrintTree@{PrintTree}}
+\index{PrintTree@{PrintTree}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{PrintTree()}
+{\footnotesize\ttfamily void Tree\+Lib.\+Bin\+Search\+Tree.\+Print\+Tree (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{List$<$ int $>$}]{Output }\end{DoxyParamCaption})}
+
+
+
+Вывод данных дерева симметричным обходом. Производит обход дерева в порядке возрастания ключа. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+{\em Output} & Список в кторый выводятся значения.\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_ad3ec7a15724afe57853ac386fffd3ad8}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Search@{Search}}
+\index{Search@{Search}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Search()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Search (\begin{DoxyParamCaption}\item[{int}]{Key }\end{DoxyParamCaption})}
+
+
+
+Поиск узла с определнным ключом в дереве. Поскольку дерево создается отсортированым, то сложность поиска оценивается как О(\+Log\+N) 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Key} & Ключ необходимого узла\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел с данным ключом
+\end{DoxyReturn}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_aa922b9a35e55b6ea724d5bc2bab74ac8}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!Search@{Search}}
+\index{Search@{Search}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{Search()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+Search (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необходимого места. Метод для одинаковых ключа и значения. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+{\em Key} & Ключ необходимого узла\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел с данным ключом
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\label{class_tree_lib_1_1_bin_search_tree_a00f1089ba7921ea305a08ac8829accb7}} 
+\index{TreeLib.BinSearchTree@{TreeLib.BinSearchTree}!root@{root}}
+\index{root@{root}!TreeLib.BinSearchTree@{TreeLib.BinSearchTree}}
+\doxysubsubsection{root}
+{\footnotesize\ttfamily \textbf{ Node} Tree\+Lib.\+Bin\+Search\+Tree.\+root\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Поле корня дерева, представляющие из себя узел. 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/folder/\+Tree\+Lib/\textbf{ Bin\+Search\+Tree.\+cs}\end{DoxyCompactItemize}

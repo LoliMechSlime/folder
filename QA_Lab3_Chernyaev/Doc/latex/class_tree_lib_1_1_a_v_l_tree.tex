@@ -1,0 +1,307 @@
+\doxysection{Класс Tree\+Lib.\+AVLTree}
+\label{class_tree_lib_1_1_a_v_l_tree}\index{TreeLib.AVLTree@{TreeLib.AVLTree}}
+
+
+Класс для создания структуры данных АВЛ дерева. Имеет балансировку дерева при изменении узлов для сохранения сложности О(\+Log\+N) при работе с деревом. Разница между высотами дочернего узла всегда равна 1 или 0 по модулю.  
+
+
+Граф наследования\+:Tree\+Lib.\+AVLTree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_lib_1_1_a_v_l_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ AVLTree} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Конструктор дерева из имеющегося узла \end{DoxyCompactList}\item 
+\textbf{ AVLTree} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с разным ключом и значением \end{DoxyCompactList}\item 
+\textbf{ AVLTree} (int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с одним ключом и значением \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \textbf{ Tree\+Lib.\+Bin\+Search\+Tree}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bin\+Search\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Конструктор дерева из имеющегося узла \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с разным ключом и значением \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с одним ключом и значением \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с разными ключом и значением в дерево. \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с одинаковым ключом и значением в дерево. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Search} (int Key)
+\begin{DoxyCompactList}\small\item\em Поиск узла с определнным ключом в дереве. Поскольку дерево создается отсортированым, то сложность поиска оценивается как О(\+Log\+N) \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Delete} (int Key)
+\begin{DoxyCompactList}\small\item\em Удаление узла с определенным ключом в дереве. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Min} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с минимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Max} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с максимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+void \textbf{ Print\+Tree} (\textbf{ Node} \textbf{ Node}, List$<$ int $>$ Output)
+\begin{DoxyCompactList}\small\item\em Вывод данных дерева симметричным обходом. Производит обход дерева в порядке возрастания ключа. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Удаление всего дерева обратным обходом. \end{DoxyCompactList}\item 
+void \textbf{ Copy\+Tree} (\textbf{ Bin\+Search\+Tree} target\+Tree)
+\begin{DoxyCompactList}\small\item\em Копирование дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+override void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Вставка работает по принципу бинарного дерева. После вставки вычисляет высоты и проводит перебалансирование. \end{DoxyCompactList}\item 
+override \textbf{ Node} \textbf{ Delete} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Удаление работает по принципу бинарного дерева. После удаления вычисляет высоты и проводит перебалансирование. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Защищенные члены унаследованные от \textbf{ Tree\+Lib.\+Bin\+Search\+Tree}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для различных ключа и значения. \end{DoxyCompactList}\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Search} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необходимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Delete} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления узла с определенным ключом в дереве. В данном классе удаление начинается от дерева и идет по рекурсии до необходимого места. Удаление работает по правилам\+: Если элемент является листом, то заменяется на null Если элемент имеет одного ребенка, то он заменяется на ребенка Если элемент имеет двух детей, наибольший элемент левой ветки встает на место родителя. Этот ребенок удаляется в последствии. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления всего дерева обратным обходом с определенно узла. Позволяет безопастно удалить дерево в языках с ручным управление памятью. \end{DoxyCompactList}\item 
+virtual void \textbf{ Copy\+Tree} (\textbf{ Node} Source\+Node, \textbf{ Node} Target\+Node)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для копирования дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static int \textbf{ Get\+Height} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Получение высоты узла Не существующий узел имеет высоту -\/1. \end{DoxyCompactList}\item 
+static void \textbf{ Update\+Height} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Обновление высоты узла в связи с изменением узлов дерева Во время скрутки стека из-\/за рекурсии обновляет высоты всех пройденых элементов Высота вычисляется по формуле $Max(HeightLeft,HeightRight)+1$. \end{DoxyCompactList}\item 
+static int \textbf{ Get\+Balance} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Проверка текущего баланса узла Дерево перегружено влево, если число отрицательное Дерево перегружено вправо, если число положительное \end{DoxyCompactList}\item 
+static void \textbf{ Swap} (\textbf{ Node} a, \textbf{ Node} b)
+\begin{DoxyCompactList}\small\item\em Поменять местами два узла в дереве \end{DoxyCompactList}\item 
+static void \textbf{ Right\+Rotate} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Правый поворот узла в дереве. После поворота высоты пересчитывются. \end{DoxyCompactList}\item 
+static void \textbf{ Left\+Rotate} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Левый поворот узла в дереве. После поворота высоты пересчитывются. \end{DoxyCompactList}\item 
+static void \textbf{ Balance} (\textbf{ AVLNode} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Проверка балансировки детей. Проводит балансировку дерева. После поворота высоты пересчитывются. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ AVLNode} \textbf{ root}
+\begin{DoxyCompactList}\small\item\em Поле корня дерева, представляющие из себя АВЛ узел. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для создания структуры данных АВЛ дерева. Имеет балансировку дерева при изменении узлов для сохранения сложности О(\+Log\+N) при работе с деревом. Разница между высотами дочернего узла всегда равна 1 или 0 по модулю. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a50fc663b5aa3d68470f94239138bcad8}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!AVLTree@{AVLTree}}
+\index{AVLTree@{AVLTree}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{AVLTree()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+AVLTree.\+AVLTree (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})}
+
+
+
+Конструктор дерева из имеющегося узла 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Проинициализированный узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_af92490b8764c1821b6d3e48c5ccd9fdb}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!AVLTree@{AVLTree}}
+\index{AVLTree@{AVLTree}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{AVLTree()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+AVLTree.\+AVLTree (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания дерева с корнем с разным ключом и значением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Key} & Ключ узла\\
+\hline
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a88e794efab15cef1a07fb874f3fa1b33}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!AVLTree@{AVLTree}}
+\index{AVLTree@{AVLTree}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{AVLTree()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+AVLTree.\+AVLTree (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания дерева с корнем с одним ключом и значением 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Value} & Данные узла\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a8b8aa2ac09f98653bbc71d600dd0f259}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!Balance@{Balance}}
+\index{Balance@{Balance}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{Balance()}
+{\footnotesize\ttfamily static void Tree\+Lib.\+AVLTree.\+Balance (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Проверка балансировки детей. Проводит балансировку дерева. После поворота высоты пересчитывются. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_ab71a8fde5a1cf98d4a86c637442e8103}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!Delete@{Delete}}
+\index{Delete@{Delete}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{Delete()}
+{\footnotesize\ttfamily override \textbf{ Node} Tree\+Lib.\+AVLTree.\+Delete (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Удаление работает по принципу бинарного дерева. После удаления вычисляет высоты и проводит перебалансирование. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \textbf{ Tree\+Lib.\+Bin\+Search\+Tree} \doxyref{}{стр.}{class_tree_lib_1_1_bin_search_tree_afff08ecbb146c102a8d5f3360c307a0c}.
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a602d0878544b949bbb555abb524462d8}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!GetBalance@{GetBalance}}
+\index{GetBalance@{GetBalance}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{GetBalance()}
+{\footnotesize\ttfamily static int Tree\+Lib.\+AVLTree.\+Get\+Balance (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Проверка текущего баланса узла Дерево перегружено влево, если число отрицательное Дерево перегружено вправо, если число положительное 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+returns$>$Значение перугрузки\mbox{\label{class_tree_lib_1_1_a_v_l_tree_ac0a6cf667778621609b78c8109e77124}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{GetHeight()}
+{\footnotesize\ttfamily static int Tree\+Lib.\+AVLTree.\+Get\+Height (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Получение высоты узла Не существующий узел имеет высоту -\/1. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+returns$>$Высота начального узла\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a39ddf27f47f502573eeacf57c3da2163}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!Insert@{Insert}}
+\index{Insert@{Insert}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{Insert()}
+{\footnotesize\ttfamily override void Tree\+Lib.\+AVLTree.\+Insert (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node,  }\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Вставка работает по принципу бинарного дерева. После вставки вычисляет высоты и проводит перебалансирование. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Начальный узел\\
+\hline
+\end{DoxyParams}
+
+
+Переопределяет метод предка \textbf{ Tree\+Lib.\+Bin\+Search\+Tree} \doxyref{}{стр.}{class_tree_lib_1_1_bin_search_tree_a0a09ba6f2705e0bab506e61968417d43}.
+
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a873773dd454e6dfeae5e2437df4b2709}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!LeftRotate@{LeftRotate}}
+\index{LeftRotate@{LeftRotate}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{LeftRotate()}
+{\footnotesize\ttfamily static void Tree\+Lib.\+AVLTree.\+Left\+Rotate (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Левый поворот узла в дереве. После поворота высоты пересчитывются. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Узел для поворота\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_ab18d9fbd5b1ea5deea5bdbf45bc77b8e}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!RightRotate@{RightRotate}}
+\index{RightRotate@{RightRotate}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{RightRotate()}
+{\footnotesize\ttfamily static void Tree\+Lib.\+AVLTree.\+Right\+Rotate (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Правый поворот узла в дереве. После поворота высоты пересчитывются. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Node} & Узел для поворота\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_a695b8217daf6184ad1a04f4d70505636}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!Swap@{Swap}}
+\index{Swap@{Swap}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{Swap()}
+{\footnotesize\ttfamily static void Tree\+Lib.\+AVLTree.\+Swap (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{a,  }\item[{\textbf{ Node}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Поменять местами два узла в дереве 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em a} & Первый узел\\
+\hline
+{\em b} & Второй узел\\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_aad866c11532284888cf39e81e35e53d9}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!UpdateHeight@{UpdateHeight}}
+\index{UpdateHeight@{UpdateHeight}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{UpdateHeight()}
+{\footnotesize\ttfamily static void Tree\+Lib.\+AVLTree.\+Update\+Height (\begin{DoxyParamCaption}\item[{\textbf{ AVLNode}}]{Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Обновление высоты узла в связи с изменением узлов дерева Во время скрутки стека из-\/за рекурсии обновляет высоты всех пройденых элементов Высота вычисляется по формуле $Max(HeightLeft,HeightRight)+1$. 
+
+
+
+\doxysubsection{Данные класса}
+\mbox{\label{class_tree_lib_1_1_a_v_l_tree_aaf6e4e6e34b092c7e492f38c17404d66}} 
+\index{TreeLib.AVLTree@{TreeLib.AVLTree}!root@{root}}
+\index{root@{root}!TreeLib.AVLTree@{TreeLib.AVLTree}}
+\doxysubsubsection{root}
+{\footnotesize\ttfamily \textbf{ AVLNode} Tree\+Lib.\+AVLTree.\+root\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Поле корня дерева, представляющие из себя АВЛ узел. 
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/folder/\+Tree\+Lib/\textbf{ AVLTree.\+cs}\end{DoxyCompactItemize}

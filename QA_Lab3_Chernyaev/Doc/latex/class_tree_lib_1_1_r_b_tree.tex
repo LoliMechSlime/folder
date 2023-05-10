@@ -1,0 +1,94 @@
+\doxysection{Класс Tree\+Lib.\+RBTree}
+\label{class_tree_lib_1_1_r_b_tree}\index{TreeLib.RBTree@{TreeLib.RBTree}}
+
+
+Класс для создания структуры данных красно-\/черного дерева. Корень и лист всегда черного цвета У каждого красного узла оба ребенка черные.  
+
+
+Граф наследования\+:Tree\+Lib.\+RBTree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_lib_1_1_r_b_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ RBTree} (\textbf{ Node} \textbf{ Node})
+\item 
+\textbf{ RBTree} (int Value)
+\item 
+\textbf{ RBTree} (int Key, int Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены унаследованные от \textbf{ Tree\+Lib.\+Bin\+Search\+Tree}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Bin\+Search\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Конструктор дерева из имеющегося узла \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с разным ключом и значением \end{DoxyCompactList}\item 
+\textbf{ Bin\+Search\+Tree} (int Value)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания дерева с корнем с одним ключом и значением \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с разными ключом и значением в дерево. \end{DoxyCompactList}\item 
+void \textbf{ Insert} (int Value)
+\begin{DoxyCompactList}\small\item\em Вставка нового узла с одинаковым ключом и значением в дерево. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Search} (int Key)
+\begin{DoxyCompactList}\small\item\em Поиск узла с определнным ключом в дереве. Поскольку дерево создается отсортированым, то сложность поиска оценивается как О(\+Log\+N) \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Delete} (int Key)
+\begin{DoxyCompactList}\small\item\em Удаление узла с определенным ключом в дереве. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Min} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с минимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+\textbf{ Node} \textbf{ Get\+Max} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Поиск узла с максимальным значением ключа от данного узла. \end{DoxyCompactList}\item 
+void \textbf{ Print\+Tree} (\textbf{ Node} \textbf{ Node}, List$<$ int $>$ Output)
+\begin{DoxyCompactList}\small\item\em Вывод данных дерева симметричным обходом. Производит обход дерева в порядке возрастания ключа. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Удаление всего дерева обратным обходом. \end{DoxyCompactList}\item 
+void \textbf{ Copy\+Tree} (\textbf{ Bin\+Search\+Tree} target\+Tree)
+\begin{DoxyCompactList}\small\item\em Копирование дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+\doxysubsubsection*{Защищенные члены унаследованные от \textbf{ Tree\+Lib.\+Bin\+Search\+Tree}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Key, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для различных ключа и значения. \end{DoxyCompactList}\item 
+virtual void \textbf{ Insert} (\textbf{ Node} \textbf{ Node}, int Value)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необхордимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Search} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для вставки узла в дерево от определнного узла. В данном классе вставка начинается от дерева и идет по рекурсии до необходимого места. Метод для одинаковых ключа и значения. \end{DoxyCompactList}\item 
+virtual \textbf{ Node} \textbf{ Delete} (\textbf{ Node} \textbf{ Node}, int Key)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления узла с определенным ключом в дереве. В данном классе удаление начинается от дерева и идет по рекурсии до необходимого места. Удаление работает по правилам\+: Если элемент является листом, то заменяется на null Если элемент имеет одного ребенка, то он заменяется на ребенка Если элемент имеет двух детей, наибольший элемент левой ветки встает на место родителя. Этот ребенок удаляется в последствии. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Tree} (\textbf{ Node} \textbf{ Node})
+\begin{DoxyCompactList}\small\item\em Защищенный метод для удаления всего дерева обратным обходом с определенно узла. Позволяет безопастно удалить дерево в языках с ручным управление памятью. \end{DoxyCompactList}\item 
+virtual void \textbf{ Copy\+Tree} (\textbf{ Node} Source\+Node, \textbf{ Node} Target\+Node)
+\begin{DoxyCompactList}\small\item\em Защищенный метод для копирования дерева в другое дерево путем прямого обхода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс для создания структуры данных красно-\/черного дерева. Корень и лист всегда черного цвета У каждого красного узла оба ребенка черные. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\label{class_tree_lib_1_1_r_b_tree_a00723268b34f9b8992c3ce6616a9c3b0}} 
+\index{TreeLib.RBTree@{TreeLib.RBTree}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!TreeLib.RBTree@{TreeLib.RBTree}}
+\doxysubsubsection{RBTree()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+RBTree.\+RBTree (\begin{DoxyParamCaption}\item[{\textbf{ Node}}]{Node }\end{DoxyParamCaption})}
+
+\mbox{\label{class_tree_lib_1_1_r_b_tree_a7ea049e9e535515b2679d142b99c46df}} 
+\index{TreeLib.RBTree@{TreeLib.RBTree}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!TreeLib.RBTree@{TreeLib.RBTree}}
+\doxysubsubsection{RBTree()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+RBTree.\+RBTree (\begin{DoxyParamCaption}\item[{int}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\label{class_tree_lib_1_1_r_b_tree_ad6e6ceae59db2edef211d1a1e7981dde}} 
+\index{TreeLib.RBTree@{TreeLib.RBTree}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!TreeLib.RBTree@{TreeLib.RBTree}}
+\doxysubsubsection{RBTree()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tree\+Lib.\+RBTree.\+RBTree (\begin{DoxyParamCaption}\item[{int}]{Key,  }\item[{int}]{Value }\end{DoxyParamCaption})}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Desktop/folder/\+Tree\+Lib/\textbf{ RBTree.\+cs}\end{DoxyCompactItemize}
